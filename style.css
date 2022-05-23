@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #224487;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form__input {
+  text-align: center;
+  outline: none;
+  border: 0;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.form__btn {
+  position: relative;
+  background-color: #518ff9;
+  border: none;
+  font-size: 15px;
+  color: #ffffff;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.form__btn:hover {
+  background-color: #387bee;
+}
+
+.form__btn:active {
+  background-color: #518ff9;
+  transform: translateY(4px);
+}
+
+.listTasks {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.listTasks__task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: aliceblue;
+  transition: all 0.5s linear;
+}
+
+.listTasks__p {
+  word-break: break-all;
+  white-space: normal;
+  width: 100%;
+  outline: none;
+  border: 0;
+  background-color: aliceblue;
+}
+
+.listTasks__p:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.listTasks__btns {
+  display: flex;
+  width: 50px;
+  margin: 5px;
+  justify-content: space-between;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+
+.listTasks__btns:hover {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.listTasks__borrar:hover {
+  color: crimson;
+}
+.listTasks__borrar:active {
+  font-size: 15px;
+}
+
+.listTasks__editar:hover {
+  color: limegreen;
+}
+.listTasks__editar:active {
+  font-size: 15px;
+}
+
+.wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.popup {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.popup__p {
+  color: #387bee;
+  font-size: 25px;
+  margin: 10px;
+}
+.popup__btns {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+  max-width: 150px;
+}
+
+#si {
+  color: limegreen;
+}
+#no {
+  color: crimson;
+}
+
+#si:hover {
+  transform: rotate(7deg);
+  font-size: 20px;
+}
+#no:hover {
+  transform: rotate(7deg);
+  font-size: 20px;
+}
+
+#si:active {
+  transform: rotate(3deg);
+  font-size: 17px;
+}
+#no:active {
+  transform: rotate(3deg);
+  font-size: 17px;
+}
