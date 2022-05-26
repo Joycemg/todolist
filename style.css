@@ -11,7 +11,7 @@ body {
 
 .container {
   display: flex;
-  width: 400px;
+  width: 350px;
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +72,7 @@ body {
 }
 
 .listTasks__task {
+  transition: all 0.5s linear;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,21 +81,22 @@ body {
   padding: 5px;
   margin-bottom: 10px;
   background-color: aliceblue;
-  transition: all 0.5s linear;
 }
 
 .listTasks__p {
+  word-wrap: break-word;
   word-break: break-all;
-  white-space: normal;
   width: 100%;
   outline: none;
   border: 0;
   background-color: aliceblue;
+  font-size: 18px;
+  transition: all 1s linear;
 }
 
 .listTasks__p:hover {
   cursor: pointer;
-  color: gray;
+  font-size: 15px;
 }
 
 .listTasks__btns {
@@ -105,14 +107,15 @@ body {
   align-items: center;
   transition-duration: 0.4s;
 }
-
-.listTasks__btns:hover {
-  cursor: pointer;
-  font-size: 20px;
+.tachado {
+  text-decoration-style: double;
+  text-decoration-line: line-through;
 }
 
 .listTasks__borrar:hover {
   color: crimson;
+  cursor: pointer;
+  font-size: 22px;
 }
 .listTasks__borrar:active {
   font-size: 15px;
@@ -120,6 +123,8 @@ body {
 
 .listTasks__editar:hover {
   color: limegreen;
+  cursor: pointer;
+  font-size: 22px;
 }
 .listTasks__editar:active {
   font-size: 15px;
@@ -165,25 +170,48 @@ body {
 
 #si {
   color: limegreen;
+  font-size: 20px;
 }
 #no {
   color: crimson;
+  font-size: 20px;
 }
 
 #si:hover {
-  transform: rotate(7deg);
-  font-size: 20px;
+  font-size: 22px;
+  animation-duration: 1s;
+  animation-name: rotate;
 }
 #no:hover {
-  transform: rotate(7deg);
-  font-size: 20px;
+  font-size: 22px;
+  animation-duration: 1s;
+  animation-name: rotate;
+}
+@keyframes rotate {
+  50% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
 }
 
 #si:active {
   transform: rotate(3deg);
-  font-size: 17px;
+  font-size: 15px;
 }
 #no:active {
   transform: rotate(3deg);
-  font-size: 17px;
+  font-size: 15px;
+}
+
+.centrar {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 2px white, 3px whitesmoke;
+  color: rgb(6, 137, 237);
+}
+.centrar:hover {
+  font-size: 35px;
 }
